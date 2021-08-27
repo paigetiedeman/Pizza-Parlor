@@ -42,6 +42,10 @@ _Paige Tiedeman **paigetiedeman@gmail.com**_
 
 Describe Pizza()
 
-Test: "A user can input one topping for their desired pizza and receive a cost"  
-Code:  
-Expected Output:  
+Test: "A user can input one topping for their desired pizza and the function will store it"  
+Code: let pizza = new Pizza("1", 20);  
+Expected Output: Pizza {topping: "1", size: 20}  
+
+Test: "It will return a cost for one topping"  
+Code: let pizza = new Pizza("1", 20);
+Expected Output: $20
