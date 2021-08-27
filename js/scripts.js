@@ -13,12 +13,11 @@ function Pizza(topping, size) {
 Pizza.prototype.calculateCost = function(pizzaCost) {
   let plainPizza = "$15";
   let price;
-  if (this.topping === "1") {
+  if (this.topping === "cheese" || this.topping === "pepperoni" || this.topping === "mushrooms") {
     return price = "$20";
   } else {
     return plainPizza;
   }
 };
 
-//let pizza = new Pizza("1", 20);
-//console.log(pizza)
+//let pizza = new Pizza("cheese", 20);

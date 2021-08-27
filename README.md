@@ -49,3 +49,7 @@ Expected Output: Pizza {topping: "1", size: 20}
 Test: "It will return a cost for one topping"  
 Code: let pizza = new Pizza("1", 20);
 Expected Output: $20
+
+Test: "A user can input additional toppings for their desired pizza and the function will store it"  
+Code: let pizza = new Pizza("1", 20);  
+Expected Output: Pizza {topping: "1", size: 20}
