@@ -51,5 +51,9 @@ Code: let pizza = new Pizza("1", 20);
 Expected Output: $20
 
 Test: "A user can input additional toppings for their desired pizza and the function will store it"  
-Code: let pizza = new Pizza("1", 20);  
-Expected Output: Pizza {topping: "1", size: 20}
+Code: let pizza2 = new Pizza(["cheese", "pepperoni"], 20);  
+Expected Output: Pizza {topping: Array(2), size: 20}
+
+Test: "A user can input toppings and size for their desired pizza and get a price"  
+Code: let pizza2 = new Pizza(["cheese", "pepperoni"], 20);  
+Expected Output: pizza2 = $25

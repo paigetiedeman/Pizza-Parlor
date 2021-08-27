@@ -15,7 +15,10 @@ Pizza.prototype.calculateCost = function(pizzaCost) {
   let price;
   if (this.topping === "cheese" || this.topping === "pepperoni" || this.topping === "mushrooms") {
     return price = "$20";
-  } else {
+  } else if (this.size >= 15) {
+    return price = "$25"
+  }
+  else {
     return plainPizza;
   }
 };
