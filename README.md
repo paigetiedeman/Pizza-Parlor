@@ -65,3 +65,7 @@ Expected Output: pizza2 = $30
 Test: "It will output a price based on user selections"   
 Code: input "Cheese", 20", "Cheese Stuffed"  
 Expected Output: $30   
+
+Test: "User can select a different crust to add on a cost"  
+Code: input: "Cheese", 20", "Gluten-free"  
+Expected Output: $38  

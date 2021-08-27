@@ -13,23 +13,29 @@ function Pizza(topping, size, crust) {
 
 Pizza.prototype.calculateCost = function (pizzaCost) {
   let plainPizza = 15;
-  // let price = 15;
   if (this.topping === "1" || this.topping === "2" || this.topping === "3" || this.topping === "4") {
-    return plainPizza = plainPizza += 2;
+    plainPizza += 2;
+    return plainPizza;
   } else if (this.size >= 15) {
-    return plainPizza = plainPizza += 5;
-  } else if (this.crust === "CS" || this.crust === "GF") {
-    return plainPizza = plainPizza += 6;
+    plainPizza += 5;
+    return plainPizza;
   } else {
     return plainPizza;
   }
 };
 
+Pizza.prototype.calculateCrust = function () {
+let plainPizza = 15;
+  if (this.crust === "CS" || this.crust === "GF") {
+    return plainPizza += 6;
+  }
+}
+
 // UI Logic
 let pizza = new Pizza();
 
 function displayPrice(pizzaCost) {
-  $(".price").html("Your Pizza is $" + pizzaCost.calculateCost());
+  $(".price").html("Your Pizza is $" + (pizzaCost.calculateCost() + pizzaCost.calculateCrust()));
 }
 
 $(document).ready(function () {
