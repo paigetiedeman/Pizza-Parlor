@@ -1,3 +1,6 @@
+body {
+  background-color: #eedac2;
+}
 
 h1 {
   font-family: 'Oleo Script', cursive;
@@ -5,11 +8,10 @@ h1 {
   color: white;
 }
 
-body {
+#container {
   font-family: 'Open Sans', sans-serif;
   margin-left: 20px;
   margin-right: 20px;
-  background-color: #eedac2;
 }
 
 .jumbotron {
@@ -33,4 +35,21 @@ button {
   height: auto;
   display: block;
   border-radius: 50px;
+}
+
+#show-price {
+  font-size: 30px;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  background-color: #cf9683;
+  padding: 5px;
+  display: block;
+  color: white;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
 }

@@ -14,7 +14,7 @@
 
 ## Description
 
-This simple HTML site lets the user to choose toppings and pizza size to pick out a pizza to order. Using JavaScript OOP to take inputs and return the final cost of a pizza. 
+This simple HTML site lets the user to choose toppings, pizza size and crust type to pick out a pizza to order. Using JavaScript OOP to take inputs and return the final cost of a pizza. 
 
 ## Setup/Installation Requirements
 
@@ -70,3 +70,6 @@ Test: "User can select a different crust to add on a cost"
 Code: input: "Cheese", 20", "Gluten-free"  
 Expected Output: $38  
 
+Test: "Multiple selections will add together for final cost"  
+Code: input: "Cheese", 20", "Gluten-Free"  
+Expected Output: $23  

@@ -1,6 +1,6 @@
 // Allow the user to choose toppings and size for the pizza they'd like to order.
 
-//Business Logic 
+//Business Logic
 function Pizza() {
   this.pizzas = {};
 }
@@ -14,8 +14,13 @@ function Pizza(topping, size, crust) {
 
 Pizza.prototype.calculateTopping = function () {
   let price = 0;
-  if (this.topping === "1" || this.topping === "2" || this.topping === "3" || this.topping === "4") {
-    return price += 12;
+  if (
+    this.topping === "1" ||
+    this.topping === "2" ||
+    this.topping === "3" ||
+    this.topping === "4"
+  ) {
+    return (price += 17);
   } else {
     return this.plain;
   }
@@ -24,32 +29,38 @@ Pizza.prototype.calculateTopping = function () {
 Pizza.prototype.calculateSize = function () {
   let price = 0;
   if (this.size === "20") {
-    return price += 5;
+    return (price += 5);
   } else if (this.size === "25") {
-    return price += 7;
+    return (price += 7);
   } else {
     return price;
   }
-}
+};
 
 Pizza.prototype.calculateCrust = function () {
-let price = 0;
+  let price = 0;
   if (this.crust === "CS" || this.crust === "GF") {
-    return price += 6;
+    return (price += 6);
   } else {
     return price;
   }
-}
+};
 
 // UI Logic
 let pizza = new Pizza();
 
 function displayPrice(pizzaCost) {
-  $(".price").html("Your Pizza is $" + (pizzaCost.calculateTopping() + pizzaCost.calculateCrust() + pizzaCost.calculateSize()));
+  $(".price").html(
+    "Your Pizza is $" +
+      (pizzaCost.calculateTopping() +
+        pizzaCost.calculateCrust() +
+        pizzaCost.calculateSize())
+  );
+  confetti();
 }
 
 $(document).ready(function () {
-  $("form#pizza-cost").submit(function(event) {
+  $("form#pizza-cost").submit(function (event) {
     event.preventDefault();
     const selectedToppings = $("#toppings option:selected").val();
     const selectedSize = $("input:radio[name=crustSize]:checked").val();
@@ -57,11 +68,7 @@ $(document).ready(function () {
     $("#toppings option:selected").val("");
     $("input:radio[name=crustSize]:checked").val("");
     $("#crust option:selected").val("");
-    let pizzaCost = new Pizza(
-      selectedToppings,
-      selectedSize,
-      selectedCrust
-    );
+    let pizzaCost = new Pizza(selectedToppings, selectedSize, selectedCrust);
     displayPrice(pizzaCost);
   });
 });
