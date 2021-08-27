@@ -9,25 +9,33 @@ function Pizza(topping, size, crust) {
   this.topping = topping;
   this.size = size;
   this.crust = crust;
+  this.plain = 15;
 }
 
 Pizza.prototype.calculateCost = function (pizzaCost) {
-  let plainPizza = 15;
+  let price = 0;
   if (this.topping === "1" || this.topping === "2" || this.topping === "3" || this.topping === "4") {
-    plainPizza += 2;
-    return plainPizza;
-  } else if (this.size >= 15) {
-    plainPizza += 5;
-    return plainPizza;
+    return price += 12;
   } else {
-    return plainPizza;
+    return this.plain;
   }
 };
 
+Pizza.prototype.calculateSize = function () {
+  let price = 0;
+  if (this.size >= 20) {
+    return price += 5;
+  } else {
+    return price;
+  }
+}
+
 Pizza.prototype.calculateCrust = function () {
-let plainPizza = 15;
+let price = 0;
   if (this.crust === "CS" || this.crust === "GF") {
-    return plainPizza += 6;
+    return price += 6;
+  } else {
+    return price;
   }
 }
 
@@ -35,7 +43,7 @@ let plainPizza = 15;
 let pizza = new Pizza();
 
 function displayPrice(pizzaCost) {
-  $(".price").html("Your Pizza is $" + (pizzaCost.calculateCost() + pizzaCost.calculateCrust()));
+  $(".price").html("Your Pizza is $" + (pizzaCost.calculateCost() + pizzaCost.calculateCrust() + pizzaCost.calculateSize()));
 }
 
 $(document).ready(function () {
