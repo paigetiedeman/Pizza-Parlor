@@ -62,3 +62,6 @@ Test: "An additional charge is added for crust type"
 Code: let pizza2 = new Pizza(["cheese", "pepperoni"], 20, "gluten-free");  
 Expected Output: pizza2 = $30  
 
+Test: "It will output a price based on user selections"   
+Code: input "Cheese", 20", "Cheese Stuffed"  
+Expected Output: $30   
