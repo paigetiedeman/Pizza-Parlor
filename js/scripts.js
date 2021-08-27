@@ -5,9 +5,10 @@ function Pizza() {
 this.pizzas = {};
 }
 
-function Pizza(topping, size) {
+function Pizza(topping, size, crust) {
   this.topping = topping;
   this.size = size;
+  this.crust = crust;
 }
 
 Pizza.prototype.calculateCost = function(pizzaCost) {
@@ -17,8 +18,9 @@ Pizza.prototype.calculateCost = function(pizzaCost) {
     return price = "$20";
   } else if (this.size >= 15) {
     return price = "$25"
-  }
-  else {
+  } else if (this.crust === "gluten-free") {
+    return price = "$30"
+  } else {
     return plainPizza;
   }
 };
