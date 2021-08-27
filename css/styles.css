@@ -1,0 +1,36 @@
+
+h1 {
+  font-family: 'Oleo Script', cursive;
+  font-size: 80px;
+  color: white;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: #eedac2;
+}
+
+.jumbotron {
+  background-image: url("../img/pizza.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: #cf7956;
+}
+
+.jumbotron p {
+  font-size: 20px;
+  color: white;
+  font-style: italic;
+}
+
+button {
+  background-color: #878F84;
+  color: white;
+  border: 2px solid #3742379a;
+  width: 30%;
+  height: auto;
+  display: block;
+  border-radius: 50px;
+}

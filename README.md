@@ -26,7 +26,7 @@ This simple HTML site lets the user to choose toppings and pizza size to pick ou
 
 ## Known Bugs
 
-* _N/A_
+* _if button is clicked multiple times the price changes_
 
 ## License
 
@@ -70,4 +70,3 @@ Test: "User can select a different crust to add on a cost"
 Code: input: "Cheese", 20", "Gluten-free"  
 Expected Output: $38  
 
- 
