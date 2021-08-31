@@ -11,6 +11,8 @@
 * JavaScript
 * JQuery
 * Bootstrap
+* Google Fonts
+* Canvas Confetti
 
 ## Description
 
